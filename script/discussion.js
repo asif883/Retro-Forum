@@ -1,10 +1,10 @@
 
-const discussSection = async (categoryName) => {
+const discussSection = async (categoryName='comedy') => {
     // const res = await fetch (`https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`);
     const res = await fetch ('https://openapi.programming-hero.com/api/retro-forum/posts');
     const data = await res.json();
     const discuss =data.posts;
-    // console.log(discuss)
+    console.log(discuss)
     displayDiscussSection(discuss);
 }
 
@@ -16,12 +16,12 @@ const displayDiscussSection = discuss =>{
     discuss.forEach(post =>{
         // console.log(post)
         const postCard= document.createElement('div');
-        postCard.classList = `flex gap-5 mt-4 w-[400px] lg:w-[700px] py-8 px-4 rounded-xl bg-gray-100`;
+        postCard.classList = `flex gap-5 mt-4 w-[400px] lg:w-[900px] py-8 px-4 rounded-xl bg-gray-100`;
         postCard.innerHTML =`
                 <div>
                 <div class="indicator">
                 <span id="${post.author.name}" class="indicator-item badge"></span> 
-                <div class="grid w-16 h-16 place-items-center"><img class="h-16 w-16" src="${post.image}" alt="${post.isActive}"></div>
+                <div class="grid w-16 h-16 place-items-center"><img class="h-16 w-16 rounded-xl" src="${post.image}" alt="${post.isActive}"></div>
               </div>
                 </div>
                 <div class="space-y-5">
@@ -38,8 +38,8 @@ const displayDiscussSection = discuss =>{
                             <p><i class="fa-solid fa-eye"></i>${post.view_count}</p>
                             <p><i class="fa-regular fa-clock pr-2"></i>${post.posted_time}</p>
                         </div>
-                        <div class="ml-[250px] lg:ml-[500px]"> 
-                            <button id="${post.id}" class="btn text-white rounded-full btn-active btn-accent"><i class="fa-solid fa-house"></i></button>
+                        <div class="ml-[250px] lg:ml-[700px]"> 
+                            <button id="${post.id}" class="btn text-white rounded-full btn-active btn-accent"><i class="fa-regular fa-envelope-open"></i></button>
                         </div>
                     </div>
                 </div>`

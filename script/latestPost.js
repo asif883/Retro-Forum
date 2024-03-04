@@ -20,7 +20,7 @@ const showPost = data => {
       <img src="${post.cover_image}" alt="" class="rounded-xl" />
     </figure>
     <div class="card-body ">
-       <p><i class="fa-regular fa-calendar mr-2"></i>${post.author.posted_date}</p>
+       <p><i class="fa-regular fa-calendar mr-2"></i>${post?.author?.posted_date ||'No publish date'}</p>
       <h2 class="card-title">${post.title}</h2>
       <p>${post.description}</p>
       <br>
@@ -29,8 +29,8 @@ const showPost = data => {
           <img class="rounded-full w-12 h-12" src="${post.profile_image}" alt="">
         </div>
         <div>
-          <p class="font-semibold text-xl">${post.author.name}</p>
-          <p>${post.author.designation}</p>
+          <p class="font-semibold text-xl">${post?.author?.name || 'Unknown'}</p>
+          <p>${post?.author?.designation || 'Unknown'}</p>
         </div>
       </div>
     </div>
