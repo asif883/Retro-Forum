@@ -12,12 +12,12 @@ const displayDiscussSection = discuss =>{
     discuss.forEach(post =>{
         // console.log(post)
         const postCard= document.createElement('div');
-        postCard.classList = `flex gap-5 mt-4 w-[700px] py-8 px-4 rounded-xl bg-gray-100`;
+        postCard.classList = `flex gap-5 mt-4 w-[400px] lg:w-[700px] py-8 px-4 rounded-xl bg-gray-100`;
         postCard.innerHTML =`
                 <div>
                     <img class="h-16 w-16" src="${post.image}" alt="">
                 </div>
-                <div class="space-y-4">
+                <div class="space-y-5">
                     <div class="flex gap-3">
                       <p>#${post.category}</p>
                       <p>Author:${post.author.name}</p>
@@ -25,10 +25,15 @@ const displayDiscussSection = discuss =>{
                     <h1 class="text-xl font-medium">${post.title}</h1>
                     <p>${post.description}</p>
                     <hr>
-                    <div class="flex gap-3">
-                      <p><i class="fa-regular fa-message pr-2"></i>${post.comment_count}</p>
-                      <p><i class="fa-solid fa-eye"></i>${post.view_count}</p>
-                      <p><i class="fa-regular fa-clock pr-2"></i>${post.posted_time}</p>
+                    <div class="">
+                        <div class="flex gap-3">
+                            <p><i class="fa-regular fa-message pr-2"></i>${post.comment_count}</p>
+                            <p><i class="fa-solid fa-eye"></i>${post.view_count}</p>
+                            <p><i class="fa-regular fa-clock pr-2"></i>${post.posted_time}</p>
+                        </div>
+                        <div class="ml-[250px] lg:ml-[500px]"> 
+                            <button class="btn text-white rounded-full btn-active btn-accent"><i class="fa-solid fa-house"></i></button>
+                        </div>
                     </div>
                 </div>`
         postContainer.appendChild(postCard);       
