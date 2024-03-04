@@ -48,8 +48,8 @@
                   <h1 class="text-3xl lg:text-6xl font-bold text-white">Welcome To the <br><span class="text-blue-300">ReTro</span> Forum</h1>
                   <p class="text-white">Share your favorite opinion and win and wp forum coffee mug!</p>
                   <label class="rounded-2xl input input-bordered flex items-center gap-2">
-                    <input type="text" class="grow" placeholder="Search here anything" />
-                    <button class="btn rounded-2xl btn-info">Search</button>
+                    <input id="search-felid" type="text" class="grow" placeholder="Search here anything" />
+                    <button onclick="search()" class="btn rounded-2xl btn-info">Search</button>
                   </label>
                 </div>
                 <div class="w-[350px] h-[250px]  bg-white rounded-2xl ">
@@ -86,12 +86,40 @@
               Yes, you can run unit tests and view the results directly within  the.<br>The integrated testing features allow for a streamlined .
             </p>
           </div>
-           <div>
+           <div class="flex flex-col lg:flex-row gap-6">
             <div id="discuss-section">
         
             </div>
-              <div>
-                
+              <div class="bg-gray-100 w-[380px] h-[520px] rounded-xl mt-4 p-8">
+                  <div class="flex justify-between mb-2">
+                    <h1 class="text-xl font-bold">Title</h1>
+                    <h2 class="text-xl font-medium">Mark as read( )</h2>
+                  </div>
+
+                    <div id="1st-click" class="hidden flex justify-between bg-white rounded-2xl p-4">
+                      <h2 class="text xl font-semibold">10 Kids Unaware of <br> Their Costume</h2>
+                      <p><i class="fa-solid fa-eye"></i>1568</p>
+                    </div>
+
+                    <div id="2nd-click" class="hidden mt-2 flex justify-between bg-white rounded-2xl p-4">
+                      <h2 class="text xl font-semibold">Funny Stand-Up <br>Comedy Specials</h2>
+                      <p><i class="fa-solid fa-eye"></i>1325</p>
+                    </div>
+
+                    <div id="3rd-click" class="hidden mt-2 flex justify-between bg-white rounded-2xl p-4">
+                      <h2 class="text xl font-semibold">Hilarious Sitcom Bloopers <br> Compilation</h2>
+                      <p><i class="fa-solid fa-eye"></i>1879</p>
+                    </div>
+
+                    <div id="4th-click" class="hidden mt-2 flex justify-between bg-white rounded-2xl p-4">
+                      <h2 class="text xl font-semibold">Introduction to Python: <br> A Beginner's Guide</h2>
+                      <p><i class="fa-solid fa-eye"></i>2650</p>
+                    </div>
+
+                    <div id="5th-click" class="hidden flex mt-2 justify-between bg-white rounded-2xl p-4">
+                      <h2 class="text xl font-semibold">Classic Rock Anthems: <br> Greatest Hits</h2>
+                      <p><i class="fa-solid fa-eye"></i>3125</p>
+                    </div>
               </div>
            </div>
       </section>
@@ -126,7 +154,7 @@
       </section>
     </main>
     <!-- footer -->
-        <footer class=" mt-10 footer footer-center p-10 bg-gray-100 text-base-content rounded-lg">
+        <footer class=" mt-20 footer footer-center p-10 bg-gray-100 text-base-content rounded-lg">
         <div class="text-center">
           <h1 class="text-3xl font-bold">ReTro</h1>
           <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical Latin literature from 45 BC</p>
